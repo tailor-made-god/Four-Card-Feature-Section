@@ -1,0 +1,175 @@
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/poppins-v21-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/poppins-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/poppins-v21-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --color-box-shadow: hsl(212, 44%, 88%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin-block: 90px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: var(--color-very-light-gray);
+  color: var(--color-grayish-blue);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+h1,
+h2 {
+  color: var(--color-very-dark-blue);
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero {
+  padding-inline: 10%;
+}
+
+.hero p {
+  max-width: 56ch;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+}
+
+.breaker {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  gap: 24px;
+}
+
+.container__card {
+  width: 345px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px 5px 7px 7px;
+  padding: 26px 30px 30px;
+  box-shadow: 2px 10px 16px var(--color-box-shadow);
+}
+
+.container__card p {
+  margin-block: 4px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.container__card .icon {
+  height: 56px;
+  align-self: flex-end;
+  margin-top: 24px;
+}
+
+.supervisor {
+  border-top: 4px solid var(--color-cyan);
+}
+
+.team-builder {
+  border-top: 4px solid var(--color-red);
+}
+
+.karma {
+  border-top: 4px solid var(--color-orange);
+}
+
+.calculator {
+  border-top: 4px solid var(--color-blue);
+}
+
+@media (width >= 75em) {
+  body {
+    margin-block: 75px;
+  }
+  header {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    line-height: 1.4;
+  }
+
+  .container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 32px;
+  }
+
+  .supervisor {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  .karma {
+    grid-column: 2 / 3;
+  }
+
+  .calculator {
+    grid-area: 1 / 3 / 3 / 4;
+    align-self: center;
+  }
+
+  .icon img {
+    width: 65px;
+    height: 65px;
+  }
+  .container__card .icon {
+    height: 65px;
+    margin-top: 44px;
+  }
+}
